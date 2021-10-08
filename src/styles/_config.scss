@@ -1,0 +1,53 @@
+ @font-face {
+    font-family: 'Fuente Blest Titulos';
+    src: url(../fonts/Snowboarding_Only.ttf);
+}
+@font-face {
+    font-family: 'Fuente Blest Texto';
+    src: url(../fonts/Core_Sans_N_65_Bold.ttf);
+}
+
+@mixin buttonStyles{
+    border:none;
+    cursor: pointer;
+}
+
+@mixin centerAll{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+    min-width: $width;
+    min-height: $height;
+}
+@mixin borderRadius($radius){
+   -webkit-border-radius: $radius;
+    -moz-border-radius  : $radius;
+     -ms-border-radius  : $radius;
+      -o-border-radius  : $radius;
+         border-radius  : $radius;
+}
+@mixin formatSpacing{
+    margin:0;
+    padding:0;
+}
+
+
+$tittleFont:"Fuente Blest Titulos";
+$textFont:"Fuente Blest Texto";
+
+$primaryColor: #f3dcb2 ;
+$secondColor: #873117 ;
+
+$bgBtn : rgba(0,0,0,0.1);
+$thirdColor: #906A3B;
+$fourthColor: #775023;   
+
+$phoneDevice: 400px;
+$tabletDevice : 700px;
+$desktopDevice: 1024px;

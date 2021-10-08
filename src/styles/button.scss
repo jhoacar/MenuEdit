@@ -1,0 +1,188 @@
+@import "config";
+
+.btn-save-all-container{
+    @include buttonStyles;
+    @include centerAll;
+    
+}
+
+.btn-save-all{
+    @include buttonStyles;
+    @include centerAll;
+    @include size(100px,50px);
+    position: relative;
+    //bottom: 5vh;
+    left: 45%;
+    border-radius: 1rem;
+    border-spacing: 1rem; 
+    //z-index: 1000000000;
+    font-family: $textFont;
+    color : black;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    background: $bgBtn;
+    @media screen and (max-width: $phoneDevice) {
+        font-size: 15px;
+        @include size(100px,50px);
+        left: 40%;
+    }
+}
+
+.btn-view-more {
+    @include size(3rem, 3rem);
+    @include borderRadius(50%);
+    @include buttonStyles;
+    background-color: $bgBtn;
+    color: white;
+    @media screen and (max-width: $phoneDevice) {
+        @include size(2.5rem,2.5rem);
+    }
+}
+
+.btn-alert-container {
+    @include centerAll();
+    @include borderRadius(1rem);
+    border-spacing: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-color: $bgBtn;
+    
+}
+
+.btn-alert-save{
+    @include centerAll();
+    @include borderRadius(1rem);
+    border-spacing: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-color: $bgBtn;
+    margin: 2rem;
+    //left:40%;
+}
+
+.btn-start{
+    position: fixed;
+    width: 60px;
+    height: 50px;
+    top: 5px;
+    cursor: pointer;
+    left: 5px;
+    font-family: $tittleFont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 10px;
+    color:black;
+}
+
+.btn-alert-text {
+    font-family: $textFont;
+    font-size: 1.5rem;
+    color: $secondColor;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: auto auto;
+    @media screen and (max-width: $phoneDevice) {
+        font-size: 1rem;
+    }
+}
+
+.btn-alert-option-container {
+    @include centerAll();
+}
+
+.btn-alert-option {
+    @include borderRadius(30%);
+    @include size(3rem, 3rem);
+    font-family: $textFont;
+    font-size: 1.5rem;
+    color: $secondColor;
+    margin: 0.4rem 0.4rem 0.4rem 0.4rem;
+    @media screen and (max-width: $phoneDevice) {
+        @include size(2.5rem,2.5rem);
+        font-size: 1rem;
+    }
+}
+
+.btn-config-container {
+    @include centerAll;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    border-spacing: 1rem;
+    border: 0.3rem dotted;
+    width: fit-content;
+    @media screen and (max-width: $phoneDevice) {
+        gap:.5rem;
+    }
+}
+
+.btn-config {
+    @include buttonStyles;
+    @include centerAll;
+    @include borderRadius(50%);
+    @include size(3rem, 3rem);
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: $textFont;
+    text-align: center;
+    @media screen and (max-width: $phoneDevice) {
+        @include size(2.5rem,2.5rem);
+    }
+}
+
+.btn-change-page {
+    @include size(6rem, 6rem);
+    @include buttonStyles;
+    @include borderRadius(50%);
+    @include centerAll;
+    position: fixed;
+    top: 0;
+    background-color: $bgBtn;
+    color: $secondColor;
+    font-size: 2rem;
+    margin: 1rem;
+    @media screen and (max-width: $phoneDevice) {
+        @include size(2.5rem,2.5rem);
+    }
+}
+.btn-change-page-svg{
+    @include buttonStyles;
+    @include size(50px,50px);
+    @include borderRadius(50%);
+    background-color: rgba(255,255,255,0.1);
+
+}
+
+
+.btn-not-pressed {
+    cursor: pointer;
+    border-top: 0.4rem solid $fourthColor;
+    box-shadow: -0.4rem 0.4rem 0.4rem $fourthColor, 
+                0.4rem 0.4rem 0.4rem $fourthColor;
+}
+.btn-not-pressed:hover{
+     cursor:pointer;
+     border-top: 0.3rem solid $fourthColor;
+     box-shadow: -0.3rem 0.3rem 0.3rem $fourthColor, 
+                0.3rem 0.3rem 0.3rem $fourthColor;
+}
+.btn-not-pressed:active{
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 0 0 0 black;
+}
+
+.btn-pressed{
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 0 0 0 black;
+}

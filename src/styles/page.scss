@@ -1,0 +1,91 @@
+@import "config";
+
+.index-page {
+    font-family: $tittleFont;
+    font-size: 5rem;
+    @media screen and (max-width: $phoneDevice) {
+        font-size: 2rem;
+    }
+}
+
+.pages-container {
+    border-bottom: 3rem;
+}
+.page {
+    width: 100%;
+    //height: 100%;
+    //position: absolute;
+    //transform-origin: left;
+}
+
+.page-tittle-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    margin: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    border-spacing: 10px;
+    border: 3px solid black;
+    @media screen and (max-width: $phoneDevice) {
+        gap: 0.5rem;
+    }
+}
+
+.category-container {
+    overflow: hidden;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border-spacing: 10px;
+    border: 3px dotted;
+    margin-bottom: 20px;
+}
+
+.page-tittle,
+.page-tittle-edit {
+    text-align: center;
+    font-family: $tittleFont;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.page-tittle-edit {
+    border-radius: 10px;
+    border-spacing: 10px;
+    max-width: 40vw;
+    min-width: 10vw;
+    @media screen and (max-width: $phoneDevice) {
+        font-size: 3rem;
+        max-width: 30vw;
+        min-width: 30vw;
+    }
+}
+
+.page-show {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+.page-hide {
+    opacity: 0;
+    transform: rotateY(-90deg);
+}
+
+.page-tittle-container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-page-info {
+    font-size: 3rem;
+    font-family: $textFont;
+    justify-self: center;
+    margin: 10px;
+}

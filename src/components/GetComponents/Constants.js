@@ -1,0 +1,9 @@
+export const ALERT = "alerta";
+export const MENU ="menu";
+export const PAGE = "page";
+export const CATEGORY = "category";
+export const PRODUCT = "product"
+export const IMAGE = "imagen";
+export const DESCRIPTION = "descripcion";
+export const PRICES = "precios";
+export const DETAILS = "detalles";

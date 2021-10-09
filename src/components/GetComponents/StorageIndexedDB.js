@@ -22,7 +22,10 @@ const fetchData = function (srcImage, resolveData, rejectData) {
 
   const fileReader = new FileReader();
 
-  fetch(srcImage)
+  fetch(srcImage,
+    {
+      credentials: 'same-origin'
+    })
     .then(response => {
       return response.blob();
     })
@@ -100,7 +103,7 @@ export const getImage = function (srcImage) {
       reject("No admite indexedDB");
 
     const request = indexedDBB.open(nameDBB, versionDBB);
-    
+
     request.onsuccess = () => {
       db = request.result;
 
@@ -109,11 +112,11 @@ export const getImage = function (srcImage) {
           resolve(response);
         })
         .catch(() => {
-          fetchData(srcImage,result=>{
+          fetchData(srcImage, result => {
             saveAtDBB(srcImage, result);
             resolve(result);
-          }, 
-          error=>reject(error));
+          },
+            error => reject(error));
         })
     };
 
@@ -124,7 +127,7 @@ export const getImage = function (srcImage) {
     };
 
     request.onerror = error => {
-      fetchData(srcImage, result=>resolve(result), error=>reject(error))
+      fetchData(srcImage, result => resolve(result), error => reject(error))
     };
 
   });

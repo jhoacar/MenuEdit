@@ -1,4 +1,4 @@
-import React, { useDebugValue, useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { connect } from 'react-redux';
 import ButtonAlert from './ButtonAlert';
 const ButtonSaveAll = ({ state }) => {
@@ -9,7 +9,7 @@ const ButtonSaveAll = ({ state }) => {
 
     const saveAll = () => {
 
-        fetch('/loadData', {
+        fetch('/data', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

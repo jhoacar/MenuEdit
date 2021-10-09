@@ -17,9 +17,10 @@ const ImagesEdit = function ({ parentElement, addImage }) {
         const formData = new FormData();
         formData.append("image", file);
 
-        fetch("/loadImage", {
+        fetch("/images/"+file.name, {
             method: 'POST',
-            body: formData
+            body: formData,
+            credentials: 'same-origin'
         })
             .then(response => console.log(response))
             .catch(error => console.log(error))

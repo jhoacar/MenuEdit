@@ -4,9 +4,7 @@ import {  createStore } from 'redux';
 
 import { fetchData } from './components/GetComponents/Getters';
 
-import MenuView from "./components/ViewComponents/MenuView";
-
-//import MenuEdit from "./components/EditComponents/MenuEdit";
+import MenuEdit from "./components/EditComponents/MenuEdit";
 
 import globalReducer from './components/ReducersComponents/GlobalReducer';
 
@@ -26,7 +24,7 @@ const App = function () {
     <>
       {data && data?.pages &&
         <Provider store={createStore(appReducer)}>
-          <MenuView></MenuView>
+          <MenuEdit></MenuEdit>
         </Provider>}
       {(!data || !data?.pages) && <span className="waiting-text">{"Cargando Menu \n"}<strong>(Espere Por Favor)</strong></span>}
     </>
